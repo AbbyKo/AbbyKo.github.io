@@ -1507,10 +1507,11 @@ input, select, textarea {
 		flex-direction: column;
 		position: relative;
 		max-width: 100%;
+		min-width: 80vw;
 		z-index: 3;
 	}
 
-		#main article {
+		#main > article {
 			-moz-transform: translateY(0.25rem);
 			-webkit-transform: translateY(0.25rem);
 			-ms-transform: translateY(0.25rem);
@@ -1523,12 +1524,13 @@ input, select, textarea {
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
+			min-width:80vw;
 			background-color: rgba(27, 31, 34, 0.85);
 			border-radius: 4px;
 			opacity: 0;
 		}
 
-			#main article.active {
+			#main > article.active {
 				-moz-transform: translateY(0);
 				-webkit-transform: translateY(0);
 				-ms-transform: translateY(0);
@@ -1536,7 +1538,7 @@ input, select, textarea {
 				opacity: 1;
 			}
 
-			#main article .close {
+			#main > article .close {
 				display: block;
 				position: absolute;
 				top: 0;
@@ -1549,7 +1551,7 @@ input, select, textarea {
 				white-space: nowrap;
 			}
 
-				#main article .close:before {
+				#main > article .close:before {
 					-moz-transition: background-color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out;
 					-ms-transition: background-color 0.2s ease-in-out;
@@ -1568,21 +1570,21 @@ input, select, textarea {
 					background-repeat: no-repeat;
 				}
 
-				#main article .close:hover:before {
+				#main > article .close:hover:before {
 					background-color: rgba(255, 255, 255, 0.075);
 				}
 
-				#main article .close:active:before {
+				#main > article .close:active:before {
 					background-color: rgba(255, 255, 255, 0.175);
 				}
 
 		@media screen and (max-width: 736px) {
 
-			#main article {
+			#main > article {
 				padding: 3.5rem 2rem 0.5rem 2rem ;
 			}
 
-				#main article .close:before {
+				#main > article .close:before {
 					top: 0.875rem;
 					left: 0.875rem;
 					width: 2.25rem;
@@ -1594,7 +1596,7 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
-			#main article {
+			#main > article {
 				padding: 3rem 1.5rem 0.5rem 1.5rem ;
 			}
 
