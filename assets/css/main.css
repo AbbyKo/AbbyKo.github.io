@@ -1355,6 +1355,7 @@ body.is-preload-1 #main {
   top: 0;
   left: 0;
   max-width:70%;
+  max-height: 70%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
