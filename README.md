@@ -1,2 +1,0 @@
-# AbbyKo.github.io
-Portfolio

@@ -5,46 +5,43 @@
 @import 'libs/breakpoints';
 
 /*
-	Dimension by HTML5 UP
+	Lens by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* BG */
-
-	#bg {
-		body.is-preload & {
-			&:before {
-				background-color: transparent;
-			}
-		}
-	}
-
-/* Header */
-
-	#header {
-		body.is-preload & {
-			> * {
-				opacity: 1;
-			}
-
-			@include vendor('filter', 'none');
-
-			.content {
-				.inner {
-					max-height: none;
-					padding: 3rem 2rem;
-					opacity: 1;
-				}
-			}
-		}
-	}
-
 /* Main */
 
 	#main {
-		article {
-			opacity: 1;
-			margin: (_size(element-margin) * 2) 0 0 0;
+		opacity: 1 !important;
+
+		@if _misc(main-side) == 'left' {
+			left: 0 !important;
+		}
+		@else {
+			right: 0 !important;
+		}
+	}
+
+	body:before {
+		content: 'Javascript is disabled :(';
+		display: block;
+		position: absolute;
+		top: 50%;
+		width: calc(100% - #{_size(main)} * 0.333333333);
+		height: 4em;
+		margin-top: -2em;
+		color: mix(_palette(page-bg), #fff, 90%);
+		cursor: default;
+		font-size: 3em;
+		line-height: 4em;
+		text-align: center;
+		white-space: nowrap;
+
+		@if _misc(main-side) == 'left' {
+			right: 0;
+		}
+		@else {
+			left: 0;
 		}
 	}
