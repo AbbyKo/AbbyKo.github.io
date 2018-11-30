@@ -1345,6 +1345,7 @@ body.is-preload-1 #main {
   transition: opacity 0.3s ease-in-out;
   top: 0;
   left: 0;
+  max-width:70%;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0;
