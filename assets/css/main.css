@@ -1083,6 +1083,9 @@ body.is-preload-1 #main {
 }
 
 .thumbnails article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
   position: relative;
   width: 50%;
