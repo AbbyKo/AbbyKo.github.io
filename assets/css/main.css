@@ -1032,6 +1032,14 @@ body.is-preload-1 #main {
   font-weight: 700;
 }
 
+.header2 {
+  padding: 0em 2.25em 1.75em 2.25em;
+}
+
+.header3 {
+  padding: 3em 2.25em 0em 2.25em;
+}
+
 /* Footer */
 
 #footer {
@@ -1095,6 +1103,7 @@ body.is-preload-1 #main {
   width: 100%;
 }
 
+/* the color outline around a selected picture */
 .thumbnails article .thumbnail:before {
   pointer-events: none;
   -moz-transition: opacity 0.25s ease;
