@@ -172,7 +172,6 @@
       // Hide article, main.
       $article.hide();
       // Show footer, header.
-      $footer.hide();
       $home.hide();
 
       // Unmark as visible.
@@ -202,7 +201,6 @@
       $article.hide();
 
       // Show footer, header.
-      $footer.hide();
       $home.hide();
 
       // Unmark as visible.
@@ -241,10 +239,7 @@
       event.stopPropagation();
 
       // Hide.
-			$main._hide();
-			setTimeout(function() {
 				$main._show('home');
-			}, 400)
     }
 
     // Otherwise, check for a matching article.
@@ -286,7 +281,7 @@
   if (location.hash === '' || location.hash === '#') {
     $window.on('load', function() {
 			$body.addClass('fullscreen-main');
-			$main._show('home');
+			$main._show('home', true);
     });
   } else if (location.hash != '#') {
     $window.on('load', function() {
