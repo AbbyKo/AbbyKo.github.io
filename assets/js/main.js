@@ -433,11 +433,16 @@ var main = (function($) { var _ = {
 							url: $thumbnail.attr('href'),
 							loaded: false
 						};
-
+						
 					// Parent.
 						$this.attr('tabIndex', '-1');
-
 					// Slide.
+							if (s.url.startsWith('https://www.youtube.com/')) {
+								s.$slide = $(`<div class="slide"><div class="caption"></div><iframe class="image" width="560" height="315" src="${s.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>`);
+								s.$slideImage = s.$slide.children('.image');
+								s.loaded = true;
+
+							} else {
 
 						// Create elements.
 	 						s.$slide = $('<div class="slide"><div class="caption"></div><img class="image"></div></div>');
@@ -448,6 +453,7 @@ var main = (function($) { var _ = {
  							// Set background stuff.
 								 s.$slideImage
 								 .attr('src', '');
+							}
 
 						// Caption.
 							s.$slideCaption = s.$slide.find('.caption');
